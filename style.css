@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    font-family: 'Montserrat', Helvetica, sans-serif
+}
+
+p {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    height:80vh;
+    border-radius: 50px;
+    background-size: auto 100%;
+    background-repeat: repeat-y;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in-out;
+}
+
+.panel h2 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel p {
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+}
+
+@media (max-width:480px) {
+    .container {
+        width: 100vw;
+    }
+
+    #div4, #div5 {
+        display: none;
+    }
+}
+
+#div1 {
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+
+#div2 {
+    background: linear-gradient(90deg,rgba(237, 221, 83, 1) 0%, rgba(166, 240, 113, 1) 49%, rgba(222, 87, 208, 1) 100%);
+}
+
+#div3 {
+    background: linear-gradient(90deg,rgba(222, 87, 208, 1) 0%, rgba(113, 170, 240, 1) 49%, rgba(89, 199, 133, 1) 100%);
+}
+
+#div4 {
+    background: linear-gradient(90deg,rgba(89, 199, 133, 1) 0%, rgba(185, 113, 240, 1) 49%, rgba(245, 160, 103, 1) 100%);
+}
+
+#div5 {
+    background: linear-gradient(90deg,rgba(245, 160, 103, 1) 0%, rgba(79, 196, 232, 1) 49%, rgba(185, 113, 240, 1) 100%);
+}
