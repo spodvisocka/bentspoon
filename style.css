@@ -57,7 +57,7 @@ p {
     flex: 5;
 }
 
-.panel.active h3 {
+.panel.active h2 {
     opacity: 1;
 }
 
