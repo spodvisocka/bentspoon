@@ -20,7 +20,7 @@ body {
 }
 
 h2 {
-    color: #D7CFFF;
+    color: #2a1e62;
     text-align: center;
     font-family: 'Montserrat', Helvetica, sans-serif
 }
@@ -38,7 +38,7 @@ p {
 
 .panel {
     height:60vh;
-    background: linear-gradient(0deg,rgba(0, 11, 158, 1) 0%, rgba(215, 207, 255, 1) 80%);
+    background: linear-gradient(0deg,rgb(186, 215, 219) 0%, rgba(215, 207, 255, 1) 80%);
     border-radius: 50px;
     background-size: auto 100%;
     background-repeat: repeat-y;
@@ -93,8 +93,8 @@ p {
     height: 80%;
     margin: auto;
     overflow-y: scroll;
-    mask-image: linear-gradient(to bottom, #000 35%,
-    #000 65%,
+    mask-image: linear-gradient(to bottom, #c8c8c8 35%,
+    #fba5a5 65%,
     transparent 100%);
     opacity: 0;
 }
@@ -104,20 +104,63 @@ p {
     transition: opacity 0.7s ease-in .7s;
 }
 
-.panel .circle {
-    background-color: rgba(34, 139, 34, 0);
-    border: 5px solid #000;
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    margin: auto;
-    opacity: 0;
-    display: none;
-}
    
-.panel.active .circle {
+.panel.active img {
     opacity: 1;
     transition: opacity 0.7s ease-in .6s;
     display: block;
 }
- 
+
+.panel:not(.active) .textbox {
+    display: none;
+}
+
+.panel:not(.active) img {
+    display: none;
+}
+
+.panel:not(.active) p {
+    display: none;
+}
+
+.panel:not(.active) ul {
+    display: none;
+}
+
+.panel:not(.active) h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0.0; /* Keep title visible but subtle */
+}
+
+.panel img {
+    width: 80%;
+ border-radius: 10px;
+ margin-top: 20px;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.panel video {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 10px; /* Add some spacing between images */
+    justify-content: center; /* Center the images */
+}
+
+.flex img {
+    width: 30%; /* Or use flex: 1 */
+    border-radius: 10px;
+    margin-top: 20px;
+    /* Remove margin-left: auto; margin-right: auto; as flex handles positioning */
+}
